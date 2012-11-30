@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.first
+    @locations = Location.order('RANDOM()').limit(1)[0]
 
     respond_to do |format|
       format.html # index.html.erb
