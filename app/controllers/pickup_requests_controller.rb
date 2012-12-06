@@ -7,9 +7,7 @@ class PickupRequestsController < ApplicationController
 
   def create
     respond_to do |format|
-      format.json { render :json => {:pickupRequestUID => rand(1000000)} }
+      format.json { render :json => {:pickupRequestUid => rand(1000000)} }
     end
   end
-
-
 end
